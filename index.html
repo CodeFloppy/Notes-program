@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <!-- css style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">Notes program</h1>
+
+        <div class="program">
+            <div class="program__header">
+                <div class="program__counter-notes" id="NotesCouter">0</div>
+
+                <div class="program__search search">
+                    <label class="search__icon icon" for="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="text" name="" class="search__input" id="search" placeholder="Search note">
+                </div>
+
+                <div class="program__new-note button icon" id="newNote">
+                    <i class="fa-solid fa-square-plus"></i>
+                </div>
+            </div>
+
+            <div class="program__notes-collection notes-collection" id="notesCollection">
+                <!-- <div class="notes-collection__note note">
+                    <div class="note__number">01</div>
+                    <div class="note__bt-read bt-read icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="note_text">this is a note</div>
+                    <div class="note__bt-delete bt-delete icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+
+                <div class="notes-collection__note note">
+                    <div class="note__number">01</div>
+                    <div class="note__bt-read bt-read icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="note_text">this is a note</div>
+                    <div class="note__bt-delete bt-delete icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+
+                <div class="notes-collection__note note">
+                    <div class="note__number">01</div>
+                    <div class="note__bt-read bt-read icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="note_text">this is a note</div>
+                    <div class="note__bt-delete bt-delete icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+
+                <div class="notes-collection__note note">
+                    <div class="note__number">01</div>
+                    <div class="note__bt-read bt-read icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="note_text">this is a note</div>
+                    <div class="note__bt-delete bt-delete icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+
+                <div class="notes-collection__note note">
+                    <div class="note__number">01</div>
+                    <div class="note__bt-read bt-read icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="note_text">this is a note</div>
+                    <div class="note__bt-delete bt-delete icon">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="program__arros arrows">
+                <div class="arrows__left icon" id="arrowLeft">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="arrows__right icon" id="arrowRight">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- create note -->
+        <div class="wrapper-glass" id="wrapperGlass">
+            <div class="create-note" id="createNote">
+                <div class="create-note__bt-exit bt-exit icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                
+                <div class="create-note__header">
+                    <input type="text" name="" placeholder="write note..." required id="inpNote" class="create-note__input">
+                </div>
+                
+                <div class="create-note__description">
+                    <textarea name="" placeholder="write description..." class="create-note__textarea" id="inpDescription"></textarea>
+                </div>
+
+                <div class="create-note__bt-create bt-check icon" id="btCheck">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <!-- read note -->
+            <div class="read-note" id="readNote">
+                <div class="read-note__bt-exit bt-exit icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <p class="read-note__note" id="readNoteNote">Note writed</p>
+
+                <p class="read-note__description" id="readNoteDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam numquam aut, perferendis aspernatur necessitatibus temporibus quibusdam natus accusamus fugit perspiciatis eos voluptate vitae inventore quas officia ratione. Enim, et laboriosam?</p>
+
+                <div class="read-note__botton">
+                    <div class="read-note__bt-update bt-update icon" id="btUpdate">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert-message" id="alertMessge">
+                <p class="alert-message__text">
+                    Sure you want to delete the note?
+                </p>
+
+                <div class="alert-message__botton">
+                    <div class="alert-message__bt-yes" id="btYes">YES</div>
+                    <div class="alert-message__bt-no"  id="btNo">NO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

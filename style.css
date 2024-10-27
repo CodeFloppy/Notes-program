@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* elements */
+
+.icon i{
+    display: block;
+}
+
+.bt-read,
+.bt-delete,
+.bt-exit,
+.bt-check,
+.bt-update{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.bt-read{
+    color: blue;
+}
+.bt-delete{
+    color: red;
+}
+.bt-exit{
+    color: red;
+}
+.bt-check{
+    color: blue;
+}
+.bt-update{
+    color: green;
+}
+
+
+.content{
+    /* position: relative; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(169, 204, 201);
+}
+h1{
+    color: black;
+    margin: 1em 0;
+}
+.program{
+    width: 90%;
+    max-width: 500px;
+}
+.program__header{
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.program__counter-notes{
+    padding: 1em;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: green;
+}
+.search{
+    align-self: flex-end;
+    padding: 0.25em;
+    display: flex;
+    align-items: center;
+    border-radius: 2em;
+    background-color: bisque;
+}
+.search__icon{
+    padding: 0.3em;
+    font-size: 1.2rem;
+    font-weight: bodl;
+}
+.search__input{
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.button{
+    
+}
+.program__new-note{
+    align-self: flex-end;
+    justify-content: flex-start;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: green;
+}
+.notes-collection{
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(151, 180, 178);
+ 
+}
+.note{
+    position: relative;
+    margin-top: 0.55em;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+}
+.note__number{
+    padding: 0.5em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+}
+.note__bt-read{
+    margin: 0 0.5em;
+}
+.note_text{
+
+}
+.note__bt-delete{
+    position: absolute;
+    right: 0;
+    margin-right: 0.5em;
+}
+
+.arrows{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrows__left,
+.arrows__right{
+    margin: 0 0.25em;
+    padding: 0.7em 1em;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background-color: green;
+}
+.arrows__left{
+    /* background-color: rgb(88, 224, 88); */
+}
+.arrows__right{
+
+}
+
+/* create note */
+.wrapper-glass{
+    visibility: collapse;
+    position: absolute;
+    z-index: 1000;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: visibility 0.3s linear;
+}
+.create-note{
+    width: 95%;
+    max-width: 550px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+
+    display: none;
+}
+
+.create-note__header{
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+.create-note__input{
+    width: 100%;
+    max-width: 250px;
+    padding: 0.5em;
+    font-size: 0.8rem;
+}
+.create-note__bt-exit,
+.create-note__.bt-check{
+    align-self: flex-end;
+    padding: 0.2em;
+    /* background-color: yellow; */
+}
+.create-note__description{
+    padding: 1em 0;
+}
+.create-note__textarea{
+    width: 100%;
+    height: 250px;
+    max-width: 350px;
+    padding: 0.5em;
+    font-size: 0.8rem;
+    resize: none;
+}
+
+.read-note{
+    width: 95%;
+    max-width: 550px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: green;
+
+    display: none;
+}
+.read-note__bt-exit{
+    align-self: flex-end;
+}
+.read-note__note{
+
+}
+.read-note__description{
+    margin: 1em 0;
+}
+.read-note__botton{
+    display: flex;
+    justify-content: space-between;
+}
+.read-note__bt-update{
+    color: blue;
+}
+.read-note__.bt-check{
+
+}
+
+.alert-message{
+    width: 400px ;
+    padding: 1em;
+    background-color: green;
+    
+    display: none;
+}
+.alert-message__text{
+    margin: 1em 0;
+    text-align: center;
+    color: white;
+}
+.alert-message__botton{
+    display: flex;
+    justify-content: center;
+}
+.alert-message__bt-yes,
+.alert-message__bt-no{
+    width: 100px;
+    margin: 1em;
+    padding: 0.5em;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.alert-message__bt-yes{
+    background-color: rgb(214, 0, 0);
+}
+.alert-message__bt-no{
+    background-color: blue;
+}
